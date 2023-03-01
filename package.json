@@ -5,7 +5,7 @@
   "homepage": "https://sergneschetniy.github.io/goit-test/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /goit-test/"
   },
   "repository": {
     "type": "git",
