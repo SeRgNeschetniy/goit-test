@@ -13,7 +13,7 @@ function followerFormat(x) {
 }
 
 function checkFollowing(id) {
-  return following.includes(id.toString()) ? 'following' : 'follow';
+  return following.includes(id) ? 'following' : 'follow';
 }
 
 const renderCards = () => {
@@ -49,8 +49,8 @@ const createUserList = () => {
 const follow = e => {
   const target = e.target;
   if (target.classList.contains('card-btn')) {
-    const id = target.dataset.id;
-    const user = usersData.find(el => el.id == id);
+    const id = Number(target.dataset.id);
+    const user = usersData.find(el => el.id === id);
 
     if (following.includes(id)) {
       user.followers -= 1;
