@@ -2,8 +2,7 @@
 
 Мета: створити картку для одного твіта та додати інтерактивності при клікові на
 кнопку.
-[Макет](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0%3A1&t=VoiY
-TfiXggVItgVd-1)
+[Макет](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0%3A1&t=VoiYTfiXggVItgVd-1)
 
 ![GitHub actions settings](./assets/img1.jpg)
 
