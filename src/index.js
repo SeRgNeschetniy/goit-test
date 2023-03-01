@@ -6,7 +6,7 @@ const refs = {
 };
 
 let following = [];
-let cards = [];
+let usersData = [];
 
 function followerFormat(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -21,13 +21,13 @@ const renderCards = () => {
   const usersLocal = JSON.parse(localStorage.getItem('users'));
 
   following = followingLocal ? followingLocal : [];
-  cards = usersLocal ? usersLocal : users;
+  usersData = usersLocal ? usersLocal : users;
 
   refs.cardsList.innerHTML = createUserList();
 };
 
 const createUserList = () => {
-  return cards
+  return usersData
     .map(
       ({ id, user, tweets, followers, avatar }) =>
         `<li class="card" data-id=${id} data-state="follow">
@@ -49,9 +49,8 @@ const createUserList = () => {
 const follow = e => {
   const target = e.target;
   if (target.classList.contains('card-btn')) {
-    // const elemItem = target.closest('.card');
     const id = target.dataset.id;
-    const user = cards.find(el => el.id == id);
+    const user = usersData.find(el => el.id == id);
 
     if (following.includes(id)) {
       user.followers -= 1;
@@ -61,7 +60,7 @@ const follow = e => {
       following.push(id);
     }
 
-    localStorage.setItem('users', JSON.stringify(cards));
+    localStorage.setItem('users', JSON.stringify(usersData));
     localStorage.setItem('following', JSON.stringify(following));
 
     renderCards();
