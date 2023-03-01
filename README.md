@@ -48,12 +48,12 @@
 
 ```json
 "users": [
-{
-"id": 1,
-"user": "Elon Reeve Musk",
-"tweets": 777,
-"followers": 100500,
-"avatar": "url.jpg"
-}
+   {
+      "id": 1,
+      "user": "Elon Reeve Musk",
+      "tweets": 777,
+      "followers": 100500,
+      "avatar": "url.jpg"
+   }
 ]
 ```
